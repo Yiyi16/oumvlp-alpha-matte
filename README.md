@@ -11,11 +11,9 @@
 - pprint
 
 ### Trimap Preparation
-Trimap is the user defined area where the alpha matte is estimated.
+Trimap stands for the "unsure" area where the alpha matte is estimated.
 
 Given the coarse segmentation mask(the middle), we obtain trimap(the right) by eroding both the foreground area and background area.
-
-Given the coarse segmentation mask, we obtain trimap by eroding both the fg area (subject area) and bg area.
 
 <p align="center">
   <img src="examples/RGB/00005/030_00/0033.png" width="160" title="Original Image"/>
@@ -23,9 +21,9 @@ Given the coarse segmentation mask, we obtain trimap by eroding both the fg area
   <img src="examples/trimap/00005/030_00/0033.png" width="160" title="Trimap"/>
 </p>
 
-'fg_kernel' is the required parameter in the matrix describing to what extend the foreground area of the coarse segmentation mask is eroded as the defined foreground. 'bg_kernel' works in a similar way.
+'fg_kernel' is the required parameter in the matrix describing to what extent the foreground area of the coarse segmentation mask is eroded as the definite foreground area. When the value gets larger, the brighter areas get thinner, whereas the darker zones get bigger. 'bg_kernel' works the same work to obtain the definite background area. 
 
-You can set this parameter according to your desired resolution.
+This parameter should be an integer. You can set this parameter according to your desired resolution. 
 
 
 ```bash
@@ -48,16 +46,16 @@ Clone this repo, and download the checkpoint from Lotus server `zhang\matting_ck
 The predictions will save to `result` folder in structure:
 ```bash
  result 
- |_ alpha
-   |_ 00001
-     |_ 000_00
-       |_ 0021.jpg
-       |_ ...
-     |_ ...
-   |_ ...  
- |_ bin_extract
- |_ matt_extract
- |_ pred_bg
- |_ pred_fg
+ |- alpha
+   |- 00001
+     |- 000_00
+       |- 0021.jpg
+       |- ...
+     |- ...
+   |- ...  
+ |- bin_extract
+ |- matt_extract
+ |- pred_bg
+ |- pred_fg
 
 ```
