@@ -13,7 +13,6 @@
 ### Trimap Preparation
 Trimap is the user defined area where the alpha matte is estimated.
 
-<<<<<<< HEAD
 Given the coarse segmentation mask(the middle), we obtain trimap(the right) by eroding both the foreground area and background area.
 
 =======
