@@ -15,7 +15,6 @@ Trimap is the user defined area where the alpha matte is estimated.
 
 Given the coarse segmentation mask(the middle), we obtain trimap(the right) by eroding both the foreground area and background area.
 
-=======
 Given the coarse segmentation mask, we obtain trimap by eroding both the fg area (subject area) and bg area.
 
 <p align="center">
